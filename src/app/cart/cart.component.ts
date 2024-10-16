@@ -5,11 +5,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { catchError, EMPTY, map, of, startWith, switchMap } from 'rxjs';
+import { map, startWith, switchMap } from 'rxjs';
 import { CartLine } from '../shared/models/cart-line.model';
 import { OrderService } from '../shared/services/order.service';
 import { OrderLine } from '../shared/models/order-line.model';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 
@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
     MatButtonToggleModule,
     MatButtonModule,
     CommonModule,
+    RouterModule,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss',
